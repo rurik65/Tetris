@@ -1,2 +1,2 @@
-*.jar
-target/
+Tetris in windows/*.jar
+Tetris in windows/target/
