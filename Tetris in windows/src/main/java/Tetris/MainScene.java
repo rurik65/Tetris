@@ -31,12 +31,8 @@ public class MainScene extends Scene {
     public void draw(Graphics2D g) {
         g.setColor(Color.black);
         g.fillRect(0, 0, game.getScreenSize().width - CELL_SIZE * 6, game.getScreenSize().height);
-     /*  Shape r = new Rectangle2D.Float(CELL_SIZE,2 * CELL_SIZE,(WORLD_WIDTH - 8)*CELL_SIZE ,(WORLD_HEIGHT-2)*CELL_SIZE);
-       g.setStroke(new BasicStroke(1));
-       g.setPaint(Color.yellow);
-       g.draw(r);*/
 
-        Image image = Toolkit.getDefaultToolkit().getImage("./resources/mountain.jpg");
+        Image image = Toolkit.getDefaultToolkit().getImage("resources/mountain2.jpg");
         g.drawImage(image, CELL_SIZE , CELL_SIZE * 2,(WORLD_WIDTH - 8)*CELL_SIZE,(WORLD_HEIGHT-2)*CELL_SIZE, new ImageObserver() {
             public boolean imageUpdate(Image img, int infoflags, int x, int y, int width, int height) {
                 return true;

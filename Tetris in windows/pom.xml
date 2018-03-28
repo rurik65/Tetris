@@ -40,9 +40,9 @@
         </plugins>
         <resources>
             <resource>
-                <directory>resources</directory>
+                <directory>/</directory>
                 <includes>
-                    <include>mountain.jpg</include>
+                    <include>*.jpg</include>
                 </includes>
 
             </resource>
