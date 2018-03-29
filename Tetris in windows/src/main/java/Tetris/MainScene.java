@@ -7,6 +7,9 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.ImageObserver;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 import static Tetris.Constants.*;
 
@@ -31,8 +34,10 @@ public class MainScene extends Scene {
     public void draw(Graphics2D g) {
         g.setColor(Color.black);
         g.fillRect(0, 0, game.getScreenSize().width - CELL_SIZE * 6, game.getScreenSize().height);
-
-        Image image = Toolkit.getDefaultToolkit().getImage("resources/mountain2.jpg");
+        ClassLoader classLoader = getClass().getClassLoader();
+        File path = new File(classLoader.getResource("./image/mountain2.jpg").getFile());
+        Image image = Toolkit.getDefaultToolkit().getImage(path.toString());//"./image/mountain2.jpg");
+        System.out.println(path);
         g.drawImage(image, CELL_SIZE , CELL_SIZE * 2,(WORLD_WIDTH - 8)*CELL_SIZE,(WORLD_HEIGHT-2)*CELL_SIZE, new ImageObserver() {
             public boolean imageUpdate(Image img, int infoflags, int x, int y, int width, int height) {
                 return true;
