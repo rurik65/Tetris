@@ -2,22 +2,16 @@ package Tetris;
 
 import Tetris.Model.BodyPart;
 import Tetris.Model.Hole;
-import com.sun.jndi.toolkit.url.Uri;
-import sun.awt.image.ToolkitImage;
-
-import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.geom.Rectangle2D;
-import java.io.File;
-import java.io.IOException;
-import java.net.URL;
+
 
 import static Tetris.Constants.*;
 
 public class MainScene extends Scene {
     private Hole hole;                              // game field
-    private Delay holeMoveDelay;
+    private Delay holeMoveDelay;                    //задержка обновления картинки
 
     public MainScene(Game game) {
         super(game);
@@ -70,7 +64,7 @@ public class MainScene extends Scene {
                     CELL_SIZE,5,5
             );
         }*/
-        holeMoveDelay.diffDelayNanos();
+        holeMoveDelay.diffDelayNanos();                         //уменьшение задержки ( SCORE)
 
         for (BodyPart bodyPart : hole.getBodyFig()) {
             g.setColor(bodyPart.getColor());

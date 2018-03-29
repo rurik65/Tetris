@@ -26,6 +26,8 @@ public class DesktopGameBuilder {
         });
         frame.requestFocus();
         game.requestFocus();
+        game.setScene(new MainScene(game));
+        game.start();
         return game;
     }
 }

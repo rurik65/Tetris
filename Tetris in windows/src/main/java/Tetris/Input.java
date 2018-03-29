@@ -9,8 +9,8 @@ public class Input implements KeyListener {
     private final Collection<KeyEvent> keyPressedEvents;
     private final Collection<KeyEvent> keyReleasedEvents;
     public Input() {
-        keyPressedEvents = new ArrayList<KeyEvent>();
-        keyReleasedEvents = new ArrayList<KeyEvent>();
+        keyPressedEvents = new ArrayList<>();
+        keyReleasedEvents = new ArrayList<>();
     }
  //   @Override
     public void keyTyped(KeyEvent event) {
@@ -20,7 +20,7 @@ public class Input implements KeyListener {
         keyPressedEvents.add(event);
     }
     public synchronized Collection<KeyEvent> getKeyPressedEvents() {
-        Collection<KeyEvent> events = new ArrayList<KeyEvent>(keyPressedEvents);
+        Collection<KeyEvent> events = new ArrayList<>(keyPressedEvents);
         keyPressedEvents.clear();
         return events;
     }
@@ -29,7 +29,7 @@ public class Input implements KeyListener {
         keyReleasedEvents.add(event);
     }
     public synchronized Collection<KeyEvent> getKeyReleasedEvents() {
-        Collection<KeyEvent> events = new ArrayList<KeyEvent>(keyReleasedEvents);
+        Collection<KeyEvent> events = new ArrayList<>(keyReleasedEvents);
         keyReleasedEvents.clear();
         return events;
     }

@@ -3,10 +3,10 @@ package Tetris.Model;
 import java.awt.*;
 
 public class BodyPart {
-   private int x;
+    private int x;
     private int y;
-
     private Color color;
+
     public BodyPart(int x, int y, Color color) {
         this.x = x;
         this.y = y;
@@ -33,6 +33,6 @@ public class BodyPart {
         return new Color(getIntRandom(),getIntRandom(),getIntRandom());
     }
     private static int getIntRandom(){
-        return 255 * (int)(2*Math.random());// + 55 *(int)(2* Math.random());
+        return 200*(int)(2*Math.random()) + 55 *(int)(2* Math.random());
     }
 }

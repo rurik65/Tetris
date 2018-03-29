@@ -14,8 +14,9 @@ public class Main {
         int screenWidth = WORLD_WIDTH * CELL_SIZE;
         int screenHeight = WORLD_HEIGHT * CELL_SIZE;
         Dimension screenSize = new Dimension(screenWidth, screenHeight);
-        Game game = DesktopGameBuilder.build(screenSize);
-        game.setScene(new MainScene(game));
-        game.start();
+        DesktopGameBuilder.build(screenSize);
+        System.out.println("Tetris started");
+     //   game.setScene(new MainScene(game));
+     //   game.start();
     }
 }
